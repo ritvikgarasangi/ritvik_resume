@@ -1,0 +1,779 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <h1>Made By- Rahul,
+    Ritvik, Arnav, Kartik,Asim, Mayur</h1>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <title>Bootstrap demo</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+
+
+  <style>
+    .colorss {
+      margin: 0 auto;
+      padding: 2em;
+      width: 3000px;
+      background-color: #12c812;
+      text-align: center;
+      border-radius: 10px;
+      position: relative;
+      background-image: conic-gradient(red, blue);
+      font-weight: bolder;
+      grid-column: inherit;
+      hyphens: manual;
+      justify-content: center;
+      kerning: 30px;
+      list-style: circle;
+      background-color: #d0db07;
+
+    }
+
+    a {
+      color: yellow;
+      font-weight: bold;
+
+    }
+
+    * {
+
+      background-color: yellowgreen;
+
+      text-shadow: 4px 4px 8px #0000;
+    }
+
+    .navi {
+      background-color: #ff3333;
+      position: relative;
+      width: 140px;
+      height: 50px;
+      background: #222;
+      border-radius: 1000px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-display: center;
+      background: conic-gradient(red);
+
+    }
+
+    .navi:hover {
+      display: flex;
+      color: #4f1919;
+      background: linear-gradient(45deg, #4f1919 #ff3333);
+      background-color: #d0db07;
+      transition: .5s;
+
+    }
+
+    .navi a {
+      position: relative;
+      display: inline-block;
+      font-size: 1em;
+      font-weight: 500;
+      color: #fff;
+      text-decoration: none;
+      padding: 0;
+      z-index: 1;
+    }
+
+    .gallery {
+      width: 900px;
+      display: flex;
+      height: 200px;
+      overflow-x: scroll;
+    }
+
+    .gallery div {
+      width: 100%;
+      display: grid;
+      grid-template-columns: auto auto auto;
+      grid-gap: 20px;
+      padding: 10px;
+
+      flex: none;
+    }
+
+    .gallery div img {
+      width: 100%;
+      filter: grayscale(100%);
+      transition: transform 0.5s;
+
+    }
+
+    .gallery::-webkit-scrollbar {
+      display: none;
+    }
+
+    .gallery-wrap {
+      display: flex;
+      align-items: left;
+      justify-content: left;
+      margin: 10px auto;
+    }
+
+    #backBtn,
+    #nextBtn {
+      width: 30px;
+      cursor: pointer;
+      height: 80px;
+
+    }
+
+    .gallery div img:hover {
+      filter: grayscale(0);
+      cursor: pointer;
+      transform: scale(1.1);
+
+    }
+
+    .boxes1 {
+      display: flex;
+      padding: 5px;
+      border: 5px solid red;
+
+    }
+
+    .pad {
+      padding: 5px;
+      margin: 15px;
+    }
+
+    .initiative {
+      box-sizing: border-box;
+      color: rgb(51, 51, 51);
+      display: block;
+      font-family: Roboto, Helvetica, Arial, sans-serif;
+      font-size: 14px;
+      height: 405.112px;
+      line-height: 20px;
+      min-height: 1px;
+      padding-left: 6.875px;
+      padding-right: 6.875px;
+      position: relative;
+      text-size-adjust: 100%;
+      unicode-bidi: isolate;
+      width: 687.575px;
+      -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    }
+
+    .container {
+      display: flex;
+      align-items: center;
+      align-content: center;
+      padding: 5px;
+      border: 5px solid red;
+      margin: 5px;
+
+    }
+
+    .navbar-me {
+      background-color: rgb(224, 17, 17);
+      display: flex;
+    }
+
+    .news-boxe {
+      display: block;
+      font-weight: bolder;
+      font-style: italic;
+      color: yellow;
+    }
+
+    .speaker {
+      background-color: #d0db07;
+      background-image: conic-gradient(rgb(21, 108, 104), rgb(88, 6, 72));
+    }
+
+    .fonter {
+      font-weight: bolder;
+    }
+
+    .form h2 {
+      text-align: center;
+      margin-top: 3em;
+      margin-bottom: 1em;
+      font-size: 36px;
+    }
+
+    .form form {
+      max-width: 50em;
+      margin: 1rem auto;
+      text-align: center;
+      margin-bottom: 3em;
+    }
+
+    .form form .input-box {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .form form .input-box input,
+    .form form textarea {
+      width: 100%;
+      padding: 1.5em;
+      font-size: 18px;
+      color: black;
+      background: rgb(241, 241, 241);
+      border-radius: 30px;
+    }
+
+    .contact-me {
+      color: #150434;
+      font-size: x-large;
+      font-weight: bolder;
+    }
+
+
+
+    #popup {
+      display: flex;
+      position: fixed;
+      left: 50%;
+      top: 50%;
+      transform: translate(-50%, -50%);
+      padding: 1px;
+      background-color: white;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      z-index: 1000;
+    }
+
+    #overlay {
+      display: none;
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 999;
+    }
+  </style>
+
+<body>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+
+
+
+  <header>
+
+
+
+
+
+    <section>
+
+      <a href="#">
+
+        <img src="https://cwit.mespune.org/wp-content/uploads/2022/09/web-banner.png" style="
+               
+                width: 1600px;
+               
+              " />
+
+      </a>
+
+    </section>
+  </header>
+
+
+  <section class="navbar-me">
+    
+    <div class="navbar-me">
+      <a href="TMV.html" class="navi"><img class="navi"
+          src="https://th.bing.com/th?q=Home+Icon+Grey&w=120&h=120&c=1&rs=1&qlt=90&cb=1&dpr=1.3&pid=InlineBlock&mkt=en-IN&cc=IN&setlang=en&adlt=moderate&t=1&mw=247"
+          alt="" width="140px" height="50px"></a>
+
+
+      <a href="about.html" class="navi" class="dropdown-item" class="dropdown-menu">
+        About Us
+      </a>
+
+      <a class="navi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Organization
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="campus.html">Campus Information</a></li>
+        <li><a class="dropdown-item" href="why.html">Why TMV</a></li>
+        <li><a class="dropdown-item" href="#">About Register</a></li>
+      </ul>
+
+
+
+      <a class="navi" href="user.html" role="button">
+        User Login
+      </a>
+
+
+
+
+      <a class="navi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Administration
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Computer Science</a></li>
+        <li><a class="dropdown-item" href="#">Law department</a></li>
+        <li><a class="dropdown-item" href="#">Management Department</a></li>
+      </ul>
+
+
+
+
+      <a class="navi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Programs Offered
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+
+
+
+      <a class="navi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Boards
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+
+
+
+      <a class="navi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Student Corner
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+
+
+
+      <a class="navi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Academics
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+
+
+      <a class="navi" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        NIRF
+      </a>
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+
+
+      <a href="#contact-mes" class="navi">ContactUs</a>
+
+    </div>
+  </section>
+
+  <div class="gallery-wrap">
+    <img src="https://cdn-icons-png.flaticon.com/128/2722/2722991.png" alt="" id="backBtn">
+    <div class="gallery">
+      <div>
+        <span><img src="https://www.tmv.edu.in/SiteImg/Desh%20Bhagat%20uni%20Convocation%201.jpeg" alt=""></span>
+        <span><img src="https://www.tmv.edu.in/SiteImg/Desh%20Bhagat%20uni%20Convocation%202.jpeg" alt=""></span>
+        <span><img
+            src="https://www.tmv.edu.in/SiteImg/Dr.%20Pranati%20Tilak%20felicitated%20by%20Nobles%20of%20commonwealth%20nations%20award%20of%20WBR%20at%20British%20Parliament_1-12-2023.jpg"
+            alt=""></span>
+      </div>
+
+
+      <div>
+        <span><img src="https://www.tmv.edu.in/SiteImg/web6.jpg" alt=""></span>
+        <span><img src="https://www.tmv.edu.in/SiteImg/web3.jpg" alt=""></span>
+        <span><img src="https://www.tmv.edu.in/SiteImg/banner%20Final.jpg" alt=""></span>
+      </div>
+    </div>
+    <img src="https://cdn-icons-png.flaticon.com/128/2722/2722985.png" alt="" id="nextBtn">
+    <aside class="news">
+      <div class="news-boxe">
+        <h1 class="text-ani">News and Annoucement <img
+            src="https://th.bing.com/th/id/OIP.nzuk8HR80ZY1_xCDd3UWogAAAA?w=161&h=180&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt="" width="100px" height="50px" class="speaker"></h1>
+        <marquee direction="up" scrollamount="3" onmouseover="this.stop();" onmouseout="this.start();"
+          style="height: 200px; overflow: scroll;"><a href="#" <p><b>addmission notice here click</b></p></a>
+          <a href="#" <p><b>sports notice here visit click</b></p></a>
+          <a href="#" <p><b>computer internship click here</b></p></a>
+          <a href="#" <p><b>another query click here</b></p></a>
+          <a href="#" <p><b>sports notice here visit click</b></p></a>
+          <a href="#" <p><b>computer internship click here</b></p></a>
+          <a href="#" <p><b>another query click here</b></p></a>
+        </marquee>
+
+        </p>
+      </div>
+    </aside>
+  </div>
+  <script>
+    let scrollContainer = document.querySelector(".gallery");
+    let backBtn = document.getElementById("backBtn");
+    let nextBtn = document.getElementById("nextBtn");
+
+    scrollContainer.addEventListener("wheel", (evt) => {
+      evt.preventDefault();
+      scrollContainer.scrollLeft += evt.deltaY;
+      scrollContainer.style.scrollBehavior = "auto";
+    });
+    nextBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft += 900;
+    });
+    backBtn.addEventListener("click", () => {
+      scrollContainer.style.scrollBehavior = "smooth";
+      scrollContainer.scrollLeft -= 900;
+    });
+  </script>
+
+
+
+
+
+
+
+  <section>
+    <div class="boxes1">
+      <marquee onmouseover="this.stop();" onmouseout="this.start();" scrolldelay="100" style="margin: 1% 1% 1% 1%;">
+        <font size="2" color="red"><b>
+            <font size="3" color="Blue">
+              <span id="rptmarquee_ctl00_lblhomemarquee" class="blink">
+                <blink> <a class="link-warning" style="color: blue;" target="_blank"
+                    href="http://www.tmv.edu.in/frmAdmissionOpen.aspx">
+                    <b class="link-warning">Admission Open for Academic Year 2024-25</b></a></blink>
+              </span>&nbsp;&nbsp;&nbsp;
+
+              <span id="rptmarquee_ctl00_lblhomemarquee">
+                <a style="color: blue;" target="_blank" href="pdf/Ph.D/PhD Notifcation 2024-2025 New.pdf">|| Admission
+                  Open for Ph.D. Programme for the Academic Year 2024-25 || </a>
+              </span>
+            </font>
+          </b></font>
+      </marquee><br>
+    </div>
+  </section>
+
+  <!--created tranding view-->
+  <div class="row">
+    <div align="center" style="margin: 2% 0 2% 0;" class="post">
+      <h4 style="color: #d0db07;" class="Minibox-title">
+        <b><u>Trending in TMV</u></b>
+      </h4>
+    </div>
+    <div class="col-sm-3">
+      <div class="box box-links">
+        <span id="rptstudent_ctl00_Label4">
+          <ul style="height: 250px; overflow-y: hidden;">
+            <center>
+              <img src="https://www.tmv.edu.in/TMVImg/lpost1_exm.PNG" style="width: 100%; height: 100px;">
+            </center>
+            <h4 style="font-size: large;" align="center" class="Minibox-title">
+              Exam Section
+            </h4>
+            <hr align="center" style="width: 95%; border: solid 0.5px grey;">
+            <p>
+              <marquee onmouseover="this.stop();" onmouseout="this.start();" scrolldelay="200" direction="up"
+                style="margin: 1% 1% 1% 1%;">
+
+                <span id="Span3" style="font-size: medium;"> * EMAIL ID : examination@tmv.edu.in<br><br>
+                  <a target="_blank" style="color: blue;" href="frmExamCorner1.aspx?val=PreExam">1. Click Here for
+                    Upcoming Examination Schedule, Time
+                    Table</a><img src="SiteImg/new_Icon.gif" alt="Image 03">
+                  <br>
+                  <br>
+                  <a style="color: blue;" target="_blank" href="frmExamCorner1.aspx?val=PostExam">2. Click
+                    Here for Results </a>
+                  <img src="SiteImg/new_Icon.gif" alt="Image 03">
+                  <br> <br>
+
+                  <a style="color: blue;" target="_blank" href="frmExamCorner1.aspx?val=ExamOther">
+                    3. Forms</a>
+                  <img src="https://www.tmv.edu.in/TMVImg/PhD%20Zone_I.png" alt="Image 03">
+                  <br> <br>
+
+
+                  <a style="color: blue;" target="_blank" href="frmExamCorner1.aspx?val=ExamNotification">
+                    4. Exam Notification</a><img src="SiteImg/new_Icon.gif" alt="Image 03"><br> <br>
+
+                  <a style="color: blue;" target="_blank" href="https://tmv.directverify.in/student/index.html">
+                    5. Document Verification Link</a><img src="SiteImg/new_Icon.gif" alt="Image 03">
+
+                </span>
+              </marquee>
+            </p>
+          </ul>
+        </span>
+        <div class="clearfix">
+        </div>
+        <p class="read-more">
+          <a href="https://www.tmv.edu.in/frmExamCorner1.aspx?val=All" target="_blank" class="btn btn-primary btn-xs pull-right"
+            style="background-color: rgb(13, 46, 46);">
+            Read More</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="box box-links">
+        <span id="spnPhD">
+          <ul style="height: 250px; overflow-y: hidden; overflow-x: hidden;">
+            <img src="https://www.tmv.edu.in/TMVImg/PhD%20Zone_I.png" style="width: 100%; height: 100px;"><br>
+            <h4 align="center" class="Minibox-title" style="padding-top: 5%">
+              Ph D Zone</h4>
+            <hr align="center" style="width: 95%; border: solid 0.5px grey;">
+            <marquee onmouseover="this.stop();" onmouseout="this.start();" scrolldelay="150" direction="up"
+              style="margin: 1% 1% 1% 1%;">
+              <span id="Span6" style="font-size: medium;">
+                <a target="_blank" href="#"><span style="font-size:small; font-family:Verdana; color:green;">Final list
+                    of selected Candidates for
+                    Ph.D 2024-2025</span></a>
+
+                <br><br>
+
+                <a target="_blank" href="#"><span style="font-size:small; font-family:Verdana; color:green;">Result of
+                    Ph.D Entrance Exam
+                    (2024-2025)</span></a>
+
+                <br><br>
+                <a target="_blank" href="#"><span style="font-size:small; font-family:Verdana; color:green;">Final List
+                    of Candidates Qualified for
+                    the Ph.D Programme 2024-2025</span></a>
+
+                <br><br>
+                <a href="pdf/Ph.D/PhD Notifcation 2024-2025 New.pdf" target="_blank"><span
+                    style="font-size:small; font-family:Verdana; color:green;"><b>PhD Notification
+                      2024-25</b></span></a><br><br>
+
+
+                <a href="#" target="_blank"><span
+                    style="font-size:small; font-family:Verdana; color:maroon;"><b>Guidelines for Carrying Consultancy
+                      work by the Academic/Technical staff</b></span></a><br><br>
+
+
+              </span>
+            </marquee>
+          </ul>
+        </span>
+        <div class="clearfix">
+        </div>
+        <p class="read-more">
+          <a href="https://www.tmv.edu.in/frmPhd.aspx" target="_blank" class="btn btn-primary btn-xs pull-right"
+            style="background-color: rgb(13, 46, 46);">Read More</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="box box-links">
+        <span id="Span2">
+          <ul style="height: 250px; overflow-y: hidden; overflow-x: hidden;">
+            <img src="https://www.tmv.edu.in/TMVImg/tmv_logo%20_2(1).png" style="width: 100%; height: 100px;"><br>
+            <h4 align="center" class="Minibox-title" style="padding-top: 5%">
+              TMV Trust</h4>
+            <hr align="center" style="width: 95%; border: solid 0.5px grey;">
+            <br>
+            To be a provider of high quality professional skills to common people who are aspiring to upgrade their
+            employability and entrepreneurship.
+          </ul>
+        </span>
+        <div class="clearfix">
+        </div>
+        <p class="read-more">
+          <a href="#" target="_blank" class="btn btn-primary btn-xs pull-right"
+            style="background-color: rgb(13, 46, 46);"> Read More</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-2">
+      <div class="box box-links">
+        <span id="Span1">
+          <ul style="height: 250px; overflow-y: hidden; overflow-x: hidden;">
+            <img src="https://www.tmv.edu.in/TMVImg/lpost1_panorama.PNG" style="width: 100%; height: 100px;">
+            <br>
+            <h4 align="center" class="Minibox-title" style="padding-top: 5%"> TMV Gallery</h4>
+            <hr align="center" style="width: 95%; border: solid 0.5px grey;">
+          </ul>
+        </span>
+        <div class="clearfix">
+        </div>
+        <p class="read-more">
+          <a href="gallery.html" target="#" class="btn btn-primary btn-xs pull-right"
+            style="background-color: rgb(13, 46, 46);">Read More</a>
+        </p>
+      </div>
+    </div>
+    <div class="col-sm-3">
+      <div class="box box-links">
+        <span id="rptfaculty_ctl00_Labelf1">
+          <ul style="height: 250px; overflow-y: hidden; overflow-x: hidden;">
+            <img src="https://www.tmv.edu.in/TMVImg/new%20update_New.png" style="width: 100%; height: 100px;"><br>
+            <h4 align="center" class="Minibox-title" style="padding-top: 5%">
+              Latest Updates</h4>
+            <hr align="center" style="width: 95%; border: solid 0.5px grey;">
+            <marquee onmouseover="this.stop();" onmouseout="this.start();" scrolldelay="200" direction="up"
+              style="margin: 1% 1% 1% 1%;">
+              <span id="Span4" style="font-size: medium;">
+                <a style="color: blue;" target="_blank" href="frmLatestUpdates.aspx?val=divLstUpd">1. Click Here for
+                  Upcoming Events</a><img src="SiteImg/new_Icon.gif" alt="Image 03">
+                <br><br>
+
+                <a style="color: blue;" target="_blank" href="frmLatestUpdates.aspx?val=divNoticeNCirculars"> 2. Click
+                  Here for Notice/Circulars </a><img src="SiteImg/new_Icon.gif" alt="Image 03">
+                <br><br>
+
+                <a style="color: blue;" target="_blank" href="frmLatestUpdates.aspx?val=divRecruitment">3.
+                  Recruitments</a><img src="SiteImg/new_Icon.gif" alt="Image 03"><br><br>
+                ssion Open for Bachelor of Physiotherapy</a><img src="SiteImg/new_Icon.gif" alt="Image 03" />
+
+              </span>
+            </marquee>
+          </ul>
+        </span>
+        <div class="clearfix">
+        </div>
+        <p class="read-more">
+          <a href="frmLatestUpdates.aspx?val=All" target="_blank" class="btn btn-primary btn-xs pull-right"
+            style="background-color: rgb(13, 46, 46);">Read more
+          </a>
+        </p>
+      </div>
+    </div>
+
+
+    <!--create image links-->
+
+    <div class="container">
+      <center><a href="achievement.html" target="_blank">
+          <img src="https://www.tmv.edu.in/TMVImg/achievements%20%20awards.jpg" width="60%" class="achive">
+          <br>
+          <center> Achievements/Awards</center>
+        </a></center>
+      <center><a href="facility.html" target="_blank">
+          <img src="https://www.tmv.edu.in/TMVImg/facility.jpg" width="60%" class="achive">
+          <br>
+          <center>Facility</center>
+        </a></center>
+      <center><a href="achieve.html" target="_blank">
+          <img src="https://www.tmv.edu.in/TMVImg/research.jpg" width="60%" class="achive">
+          <br>
+          <center>Research</center>
+        </a></center>
+      <center><a href="newsie.html" target="_blank">
+          <img src="https://www.tmv.edu.in/TMVImg/tmv%20news.jpg" width="60%" class="achive">
+          <br>
+          <center> News</center>
+        </a></center>
+    </div>
+
+    <!--footer-->
+
+    <section class="form">
+      <h2 class="contact-me" id="contact-mes">Contact<span><img
+            src="https://th.bing.com/th/id/OIP.OsFrSd5bI1uq1jIDKymn6QHaHa?w=190&h=190&c=7&r=0&o=5&dpr=1.3&pid=1.7"
+            alt="" height="30px" width="50px">TMV</span></h2>
+      <form action="#">
+        <div class="input-box">
+          Name<input type="text" placeholder="Enter your Name" !important class="fonter"> <br>
+          MobileNo<input type="number" placeholder="valid mobile number" min="10" max="10" class="fonter"><br>
+          Email<input type="email" placeholder="valid email enter" class="fonter"><br>
+          Subject<input type="text" class="fonter"><br>
+          Your Message<input type="text" width="100" height="100" class="fonter"><br>
+          <textarea name="" id="" rows="5" cols="20" placeholder="Your Message" class="fonter"></textarea><br>
+          SendDetails</Details><input type="submit" placeholder="Send Message" class="fonter">
+
+        </div>
+      </form>
+    </section>
+
+    <footer class="colorss">
+
+      <div id="footer">
+        <div class="container">
+          <div class="row">
+            <!-- /.col-md-3 -->
+            <div style="width: 20%; margin-left: 5%;" class="col-md-3 col-sm-3">
+              <h4>Contact us</h4>
+              <div class="contactDetail-box boder-none">
+                <ul>
+                  <li style="margin-bottom: 2px;">Modern Education Society's Cusrow Wadia Institute of Technology
+
+                    <br>
+                     19 , Bundgarden Road<br>
+                    Pune- 411001.
+                    <br>
+                    Contact - (020)-26164814
+                  </li>
+                  <li style="margin-bottom: 2px;">
+                    <a href="https://www.instagram.com/tmvzoom/" target="blank"><img
+                        src="https://www.tmv.edu.in/SiteImg/Instagram_50X50.png"></a> &nbsp;&nbsp;
+                    <a href="https://www.facebook.com/tmv.vidyapeeth" target="blank"><img
+                        src="https://www.tmv.edu.in/SiteImg/FB_50X50.png"></a>
+                  </li>
+                </ul>
+
+              </div>
+            </div>
+
+
+            <div style="width: 30%; margin-left: 5%;" class="col-md-3 col-sm-3">
+              <h4> About us </h4>
+              <div class="contactDetail-box boder-none">
+                <ul>
+                  <li style="margin-bottom: 2px;">The Cusrow Wadia Institute of Technology, Pune was started by the Modern Education Society, Pune. The Society itself was founded by Late Prin. V. K. Joag, an eminent educationist and Late Sir Cusrow Wadia, an industrialist of repute. The Institute made a humble beginning in 1938 with the setting up of the Department of Applied Electricity. Since then the Institute has made rapid progress and today it is a full-fledged Polytechnic with multifarious activities under its umbrella. The milestones are : 1938 Establishment, 1963 Silver Jubilee, 1988 Golden Jubilee, 1998 Diamond Jubilee, Thus, the Institute has completed 85 years of its yeomen services for the cause of Technical Education. "
+
+                    <br>
+
+                  </li>
+
+                </ul>
+              </div>
+            </div>
+
+            <div style="width: 30%; margin-left: 5%;" class="col-md-3 col-sm-3">
+              <h4>Feedback</h4>
+              <div class="contactDetail-box boder-none">
+                <ul>
+                  <li style="margin-bottom: 2px;"> 1) Teachers Feedback Form<a href="#" target="blank">&nbsp;&nbsp;
+                      Click here</a> </li>
+                  <li style="margin-bottom: 2px;"> 2) Student Feedback Form<a href="#" target="blank">&nbsp;&nbsp; Click
+                      here</a> </li>
+                  <li style="margin-bottom: 2px;"> 3) Employer Feedback Form<a href="#" target="blank">&nbsp;&nbsp;
+                      Click here</a> </li>
+                  <li style="margin-bottom: 2px;"> 4) Alumni Feedback Form<a href="#" target="blank">&nbsp;&nbsp; Click
+                      here</a> </li>
+                  <li style="margin-bottom: 2px;"> 5) Parents Feedback Form<a href="#" </ul>
+
+              </div>
+            </div>
+
+
+          </div>
+          <!-- /.row -->
+        </div>
+        <!-- /.container -->
+      </div>
+    </footer>
+
+
+
+
+
+
+    
+   
+
+</body>
+
+</html>
